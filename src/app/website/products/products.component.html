@@ -1,0 +1,47 @@
+<div class="content">
+  <div class="width-wrapper">
+    <h2>Our Products</h2>
+    <div class="products-wrapper">
+      <div class="categories">
+        <button class="category active" (click)="filterProductsBy()">All Teapots <span
+            class="material-symbols-outlined">
+            arrow_drop_up
+          </span></button>
+        <button class="category" (click)="filterProductsBy('ceramic')">Ceramic <span class="material-symbols-outlined">
+            arrow_drop_up
+          </span></button>
+        <button class="category" (click)="filterProductsBy('porcelain')">Porcelain <span
+            class="material-symbols-outlined">
+            arrow_drop_up
+          </span></button>
+        <button class="category" (click)="filterProductsBy('frangipani')">Frangipani <span
+            class="material-symbols-outlined">
+            arrow_drop_up
+          </span></button>
+        <button class="category" (click)="filterProductsBy('elephant')">Elephant <span
+            class="material-symbols-outlined">
+            arrow_drop_up
+          </span></button>
+        <button class="category" (click)="filterProductsBy('japanese')">Japanese <span
+            class="material-symbols-outlined">
+            arrow_drop_up
+          </span></button>
+      </div>
+      <div class="products">
+
+        <div class="product" *ngFor="let product of products">
+          <div class="image-wrapper" (click)="goToProduct(product)">
+            <img src="{{product.placeholderPicture}}">
+          </div>
+          <div class="description-wrapper">
+            <p class="small-font">{{product.category}}</p>
+            <p class="product-name">{{product.name}}</p>
+            <p class="price">{{product.price | currency}}</p>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

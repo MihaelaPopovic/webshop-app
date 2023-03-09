@@ -1,0 +1,88 @@
+.content {
+  .width-wrapper {
+    h2 {
+      text-align: center;
+    }
+
+    .products-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 80px;
+
+      .categories {
+        display: flex;
+        justify-content: space-evenly;
+        width: 80%;
+
+        .category {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            border: none;
+            background-color: unset;
+            font-size: 20px;
+            color: var(--font-color);
+            height: 35px;
+            .material-symbols-outlined {
+                display: none;
+            }
+        }
+        .active {
+            border-bottom:2px solid var(--dark-accent-color);
+            color: var(--dark-accent-color);
+            .material-symbols-outlined {
+                display: inline-block;
+                position: absolute;
+                top: 11px;
+            color: var(--dark-accent-color);
+
+            }
+        }
+      }
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 50px;
+            .product {
+                width: 20%;
+                margin:20px;
+                .image-wrapper {
+                    display: flex;
+                    justify-content: center;
+                    background-color: var(--beige-color);
+                    width: 100%;
+                    padding: 85px;
+                    cursor: pointer;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        .description-wrapper {
+            margin-top: 20px;
+            p {
+                margin: 10px 0px;
+            }
+            .small-font {
+                text-transform: uppercase;
+                font-size: 12px;
+                letter-spacing: 1px;
+            }
+            .product-name {
+                color: var(--dark-accent-color);
+            
+            }
+            .price {
+                font-size: 15px;
+
+            }
+        }
+      }
+    }
+  }
+}
